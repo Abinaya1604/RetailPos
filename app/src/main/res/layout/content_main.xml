@@ -1,0 +1,103 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/mainheader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#cc0000"
+        android:gravity="center" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textStyle="bold"
+            android:text="@string/app_name"
+            android:textColor="#FFFFFF" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/sidebar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mainheader"
+        android:layout_alignParentLeft="true">
+
+        <Button
+            android:id="@+id/btn_home2orderreview"
+            style="android:buttonStyle"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignLeft="@+id/btn_home2custorder"
+            android:layout_below="@+id/btn_home2custorder"
+            android:background="@drawable/order_history"
+            android:onClick="ordrev" />
+
+        <Button
+            android:id="@+id/btn_home2custregister"
+            style="android:buttonStyle"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignLeft="@+id/btn_home2orderreview"
+            android:layout_below="@+id/btn_home2orderreview"
+            android:background="@drawable/registration"
+            android:onClick="newcust" />
+
+        <Button
+            android:id="@+id/btn_home_sync"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignLeft="@+id/btn_home2custregister"
+            android:layout_below="@+id/btn_home2custregister"
+            android:background="@drawable/sync"
+            android:onClick="sync" />
+
+        <Button
+            android:id="@+id/btn_home_punch"
+            style="android:buttonStyle"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignLeft="@+id/btn_home_sync"
+            android:layout_below="@+id/btn_home_sync"
+            android:background="@drawable/punchin"
+            android:onClick="punch" />
+
+        <TextView
+            android:id="@+id/home_punchstatus"
+            android:layout_width="80dp"
+            android:layout_height="20dp"
+            android:layout_alignLeft="@+id/btn_home_punch"
+            android:layout_below="@+id/btn_home_punch"
+            android:gravity="center"
+            android:text="@string/punch_sts"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btn_home2custorder"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/sales_order"
+            android:onClick="neword" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/sidebar" >
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
